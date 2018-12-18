@@ -1,15 +1,19 @@
 ---
-title: "Introduction to Software Containers. Docker"
+title: "Introduction to Software Containers"
 teaching: 30
 exercises: 30
 questions:
 - "How can one reliably run the same application on different platforms?"
 objectives:
-- "First learning objective. (FIXME)"
+- "learning objective 1, 2, 3."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Containers are not virtual machines."
+- "Not all container solutions are well suited for HPC."
 ---
-FIXME
+
+1. Cover container runtime landscape
+1. Containers are not virtual machines
+1. In this lesson we will focus on ...
 
 {% include links.md %}
 
