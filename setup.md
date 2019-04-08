@@ -33,6 +33,11 @@ Please install Singularity following the instructions for your platform from the
 - [Windows][singularity-windows]
 - [Linux][singularity-linux]
 
+## Python
+
+HPC Container Maker is a Python package and, as such, requires a working version of Python. The
+latest version of Python can be found on the [official website][python-downloads].
+
 [dockerhub]: https://hub.docker.com/
 [dockerhub-signup]: https://hub.docker.com/signup
 [docker-mac]: https://docs.docker.com/docker-for-mac/install/
@@ -47,5 +52,6 @@ Please install Singularity following the instructions for your platform from the
 [singularity-mac]: https://www.sylabs.io/guides/3.1/user-guide/installation.html#mac
 [singularity-windows]: https://www.sylabs.io/guides/3.1/user-guide/installation.html#windows
 [singularity-linux]: https://www.sylabs.io/guides/3.1/user-guide/installation.html#install-on-linux
+[python-downloads]: https://www.python.org/downloads/
 
 {% include links.md %}
