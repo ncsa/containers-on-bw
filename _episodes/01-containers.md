@@ -22,9 +22,11 @@ anything like that? Can't we just `make install` everything from source? An hone
 question depends on what we are actually trying to achieve. Without going into too much detail,
 issues usually arise when there is a need to:
 
-1. work with multiple operating systems (Windows, macOS, Linux),
+1. work with multiple operating systems (Windows, macOS, Linux), or flavors thereof (Ubuntu, Fedora,
+   SUSE, ...)
 2. install conflicting dependencies of an application,
-3. make sure that one can repeat the work and obtain the same results
+3. use verified ("certified") software stack,
+4. make sure that one can repeat the work and obtain the same results
   - updated dependencies / software
   - human factor
 
@@ -57,7 +59,7 @@ But can't we solve all of these problems using just virtual machines (VMs)?
 
 ## Virtual Machines
 
-Virtual machines are full-fledged emulators of a real computer and deserve a dedicated lesson on
+Virtual machines are full-fledged emulators of real computers and deserve a dedicated lesson on
 their own. The actual "real" hardware that runs a VM is called a "host" and the emulated machine is
 called a "guest". All guest machines are managed by a single hypervisor that ensures that guests can
 not affect each other and the host system. There are two types of VMs: Type-1 ("bare metal") and
@@ -71,7 +73,7 @@ operating systems is "assigned" to be a host.
 Type 2: Hypervisor runs inside of a host OS.](../fig/vm-types-01.png)
 
 In "bare metal" VMs, hypervisors run on the hardware and provision resources to all operating
-systems that are then launched within them. One of these operating systems is granted special
+systems that are launched within them. One of these operating systems is granted special
 privileges and is called "host" but other than that, it has exactly the same access to the
 underlying hardware as other OSes.
 
@@ -87,13 +89,14 @@ the entire computer with all of its hardware as well as full-blown operating sys
 where containers shine!
 
 
-## Raise of containers
+## Rise of containers
 
-Software containers emerged as "lightweight virtual machines". This definition is not accurate
-but it is good enough to understand their main difference with classical VMs.
-Container solutions use such Linux kernel features
-as Namespaces, CGroups (Control Groups), UnionFS, chroot to run applications in isolated
-environments. Here is a schematic illustration of practically any software container solution:
+You will sometimes hear software containers referred to as "lightweight virtual machines". Although
+this definition is not accurate, it highlights  their main difference with classical VMs: they are
+very resource-efficient. So, why is this definition not accurate and why are they so
+resource-efficient?  Container solutions rely on Linux kernel and its features (Namespaces, Control
+Groups, UnionFS, chroot) to run applications in isolated **Linux** environments. Here is a schematic
+illustration of practically any software container solution:
 
 ![Container solutions on Linux, Windows, and macOS.
 Note that container solutions can run natively on Linux because they only rely on the Linux
@@ -101,12 +104,16 @@ kernel. On Windows and Mac container solutions use VM to have access to Linux ke
 misconception, macOS run on its own kernel called Darwin.
 ](../fig/containers-01.png)
 
-The main component of any software container solution is the "Container Engine". Software containers
-on Linux differ from their counterparts on Windows and macOS in that they can use the kernel of the
-Host operating system. On Windows and Mac, on the other hand, they need a Virtual Machine that
-provides them with with access to Linux kernel and the features they require. This figure also
-highlights the fact, that all containers will inevitably have the same Linux kernel and can not
-emulate Windows environment.
+As you can see, the above charts are very similar to that of Type-2 Virtual Machines.  The main
+component of software container solutions is the "Container Engine". Software container solutions on
+Linux differ from their counterparts on Windows and macOS in that they use kernel of the host
+operating system. On Windows and Mac, on the other hand, they require a Virtual Machine that
+provides them with with access to Linux kernel. These charts also highlights the fact, that all
+containers inevitably have the same Linux kernel and can emulate Linux environments only! Although
+this is certainly a limitation when compared to the capabilities of Virtual Machines, this is also
+an advantage as one no longer needs to emulate a full-blown operating system if all they want is
+run a simple Linux application! Lower overhead is definitely a big advantage of software containers
+over Virtual Machines.
 
 ## Container solutions and Docker
 
