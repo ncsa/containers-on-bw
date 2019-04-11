@@ -1,7 +1,7 @@
 ---
 title: "Docker"
-teaching: 120
-exercises: 10
+teaching: 90
+exercises: 30
 questions:
 - "How can one use Docker?"
 - "What is the difference between Docker image and container?"
