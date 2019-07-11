@@ -22,13 +22,13 @@ anything like that? Can't we just `make install` everything from source? An hone
 question depends on what we are actually trying to achieve. Without going into too much detail,
 issues usually arise when there is a need to:
 
-1. work with multiple operating systems (Windows, macOS, Linux), or flavors thereof (Ubuntu, Fedora,
+1. Work with multiple operating systems (Windows, macOS, Linux), or flavors thereof (Ubuntu, Fedora,
    SUSE, ...)
-2. install conflicting dependencies of an application,
-3. use verified ("certified") software stack,
-4. make sure that one can repeat the work and obtain the same results
-  - updated dependencies / software
-  - human factor
+2. Install conflicting dependencies of an application,
+3. Use verified ("certified") software stack,
+4. Make sure that one can repeat the work and obtain the same results
+  - Updated dependencies / software
+  - Human factor
 
 The problem related to multiple operating systems is easy to understand and is very common. Imagine
 that a program works in Windows, so it knows how to use, say, "circles". In Linux, on the other
