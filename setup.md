@@ -21,8 +21,8 @@ Please install Docker for your platform following the instructions for your plat
   - [Ubuntu][docker-ubuntu]
   - [Binaries][docker-binaries]
 
-Please consider following optional post-installation steps on Linux. If you don't follow them,
-you will have to prefix all of the `docker` commands with `sudo`.
+On Linux, consider following optional [post-installation steps][docker-postinstall] that would allow
+you to save a tiny bit of time by not having to type `sudo` with every Docker command.
 
 ## Singularity
 
