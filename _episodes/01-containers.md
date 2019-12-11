@@ -1,5 +1,5 @@
 ---
-title: "Software Containers"
+title: "Software Containers in HPC: What and Why"
 teaching: 20
 exercises: 0
 questions:
@@ -15,18 +15,15 @@ keypoints:
 - "Not all container solutions are suited for HPC."
 ---
 
-## Software dependencies, Reproducibility, and all that jazz
+Let us begin the lesson with a discussion of _why_ we need software containers in HPC.
+What problems do they solve?
+Can't we `make install` ("build") everything from source?
+Can't we use virtual machines to solve all of our troubles?
+What are the differences between these solutions and which one is right for me?
+To answer these questions, we need to take a closer look at the challenges we are trying to address
+and specifics of the above solutions.
+So, let's get started!
 
-Before we dive deep into the lesson, let's first discuss *why* we even need software containers or
-anything like that? Can't we just `make install` everything from source? An honest answer to this
-question depends on what we are actually trying to achieve. Without going into too much detail,
-issues usually arise when there is a need to:
-
-1. Work with multiple operating systems (Windows, macOS, Linux), or flavors thereof (Ubuntu, Fedora,
-   SUSE, ...)
-2. Install conflicting dependencies of an application,
-3. Use verified ("certified") software stack,
-4. Make sure that one can repeat the work and obtain the same results
   - Updated dependencies / software
   - Human factor
 
